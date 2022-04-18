@@ -1,7 +1,9 @@
 # .github/workflows/lint.yml
 name: Lint
 
-on: [push, pull_request]
+on:
+  - push
+  - workflow_dispatch
 
 jobs:
   lint:
@@ -18,5 +20,3 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           black: true
           auto_fix: true
-          commit_message: 'PEP8 | Automate code formatting '
-          git_name: 'PEP8 Bot'
