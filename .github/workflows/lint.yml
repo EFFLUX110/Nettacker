@@ -6,9 +6,11 @@ on:
   push:
     branches:
       - main
+      - automation
   pull_request:
     branches:
       - main
+      - automation
 
 jobs:
   run-linters:
